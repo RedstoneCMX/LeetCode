@@ -32,5 +32,6 @@ LeetCode程序
 ```cpp
 if(MaxId>i){help[i]=Min(help[2*id-i],MaxId-i);}
 ```
+
 * j=2*id-i即为i关于id的对称点,根据对称性,help[j]的回文串也是可以对称到i这边的,但是如果help[j]的回文串对称过来以后超过MaxId的话,
 超出部分就不能对称过来了,所以这里help[i]为的下限为两者中的较小者,help[i]=Min(p[2*id-i],MaxId-i)。这样的话，在查找i的最长回文子串时就可以直接跳过help[i]个字符，再进行回文串的匹配，可以避免很多重复的比较。
