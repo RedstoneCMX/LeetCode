@@ -15,7 +15,7 @@ class Solution
 {
 	public:
     string convert(string s, int numRows) 
-    {
+    {     
         int len = s.length();  
         if (len == 0 || numRows <= 1) 
             return s;  
@@ -42,22 +42,21 @@ class Solution
         string convert_s = "";
         for(int i = 0;i < numRows; i++)
             convert_s += ans[i];
-        return convert_s;  
+        return convert_s; 
 
 /////////以下是另外一种方法，较复杂，不宜推荐
-     /*   int length = s.length();
+/*        int length = s.length();
     	if(length == 0 || numRows <= 1)
     		return s;
     	char s_arrange[1000][1000];
     	int count = 0;
     	int i = 0;
     	int x = 0, y = 0;
-    	int numRows2 = numRows - 1;
     	memset(s_arrange,0,sizeof(s_arrange));
 
-    	for(i=1; i <= numRows2; i++)
+    	for(i=1; i <= numRows - 1; i++)
     	{
-    		int si = count*numRows2 + (i-1);
+    		int si = count*(numRows - 1) + (i-1);
     		if(si >= length)
     			break;
     		char temp_char = s.at(si);
@@ -75,21 +74,22 @@ class Solution
     			s_arrange[x][y] = temp_char;
     		}
 
-    		//cout << temp_char<<":  x:"<< x << "y:"<< y << endl;
-
-    		if(i == numRows2){
+    		if(i == numRows - 1)
+            {
     			count ++;
     			i = 0;
     		}
     	}
-    	char convert_s[1000];
+        //通过遍历这个二维数组，得到对应的Z字形按行读取的字符串排列
+    	string str_convert = "";
     	int convert_num = 0;
     	for(x = 1; x <= numRows; x++)
     	{
     		for(y = 1; y < 1000; y++)
     		{
-    			if(s_arrange[x][y] != 0){
-    				convert_s[convert_num] = s_arrange[x][y];
+    			if(s_arrange[x][y] != 0)
+                {
+    				str_convert += s_arrange[x][y];
     				convert_num++;
     			}
     			if(convert_num == length)
@@ -98,9 +98,7 @@ class Solution
 
     		if(convert_num == length)
     				break;
-    	}
-    	convert_s[convert_num] = '\0';
-    	string str_convert = convert_s;
+    	} 	
     	return str_convert;*/
     }
 };
