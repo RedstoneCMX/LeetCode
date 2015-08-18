@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<string.h>
 using namespace std;
 ////////////////////////////解题思路///////////////////////////////////////////////////////
 /*这道题是关于Z字形的题，用一个字符串数组ans[rows]来存储通过Z字形排列之后的每一行，最后一拼接就是最终结果。
@@ -17,8 +16,6 @@ class Solution
 	public:
     string convert(string s, int numRows) 
     {
-        
-
         int len = s.length();  
         if (len == 0 || numRows <= 1) 
             return s;  
