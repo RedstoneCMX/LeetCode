@@ -44,7 +44,7 @@ class Solution
             convert_s += ans[i];
         return convert_s;  
 
-/////////以下是另外一种方法
+/////////以下是另外一种方法，较复杂，不宜推荐
      /*   int length = s.length();
     	if(length == 0 || numRows <= 1)
     		return s;
