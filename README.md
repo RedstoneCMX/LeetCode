@@ -68,3 +68,6 @@ if(MaxId>i){help[i]=Min(help[2*id-i],MaxId-i);}
 
 这里需要注意的一个地方是，题目中的测试用例中，isMatch("ab", ".\*") → true，这里可能会产生困惑，其实这里".\*"，'\*'是用来作用于'.'，
 意思是说可以有0个或多个'.'，而'.'可以匹配任意单个字符。因此"ab"一定是匹配".\*"的。
+
+##NO.11 Container With Most Water
+这道题算是一道数学题，如果穷举所有可能的情况，时间复杂度是O(n^2)，会超时。这道题的O(n)算法类似于two sum那道题，在height两头分别设一个指针，然后计算area，如果height[i] <= height[j]，那么i++，如果height[i] > height[j]，那么j--。因为在这里如果height[i] <= height[j]，移指针j的话，只会使得面积减少，决定盛水的高度是最矮的那个高度，而此时如果再移j指针，只会使得j-i宽度减少，那么面积肯定减少，因此需要j++，同理height[i] > height[j]的情况。
