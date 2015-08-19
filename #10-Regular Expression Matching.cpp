@@ -18,25 +18,27 @@ public:
         
         if(p == "")
         	return s == "";
-
-        if (p[1] == '*') // 模式串的下一个字符是'*'  
-        {  
-            while(p[0] == s[0] || (p[0] == '.' && s != ""))  
-            {  
-                //字符串与模式串匹配0/1/2...个字符的情况  
-                if (isMatch(s, p.substr(2)))  
-                    return true;  
+        if(p[1] == '*')// 模式串的下一个字符是'*'
+        {
+            while(s[0] == p[0] || (p[0] == '.' && s != ""))
+            {
+                //字符串与模式串匹配0/1/2...个字符的情况
+                if(isMatch(s,p.substr(2)))
+                    return true;
                 s = s.substr(1);
-            }  
-            //字符串与模式串不能匹配  
-            return isMatch(s, p.substr(2));  
-        }  
-        else  
-        {  
-            if (p[0] == s[0] || (p[0] == '.' && s != "")) 
-                return isMatch(s.substr(1), p.substr(1));  
-            return false;  
-        }  
+            }
+            //字符串与模式串不能匹配
+            return isMatch(s,p.substr(2));
+        }
+        // 模式串的下一个字符不是'*'
+        else
+        {
+            if(s[0] == p[0] || (p[0] == '.' && s != ""))
+                return isMatch(s.substr(1),p.substr(1));
+            else
+                return false;
+        }
+        
     } 
 };
 /*************************在leetcode上直接提交以上代码即可******************************/
