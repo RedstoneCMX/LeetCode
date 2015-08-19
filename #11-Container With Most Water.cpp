@@ -22,7 +22,7 @@ class Solution
     		//求面积
     		int area = (j - i) * MIN(height[i],height[j]);
     		if(area > maxarea)
-        			maxarea = area;
+        		maxarea = area;
         	if(height[i] <= height[j])
         		i++;
         	else
