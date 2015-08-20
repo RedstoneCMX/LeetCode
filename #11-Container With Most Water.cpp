@@ -43,7 +43,6 @@ int main()
 		cin >> temp_height;
 		height.push_back(temp_height);
 	}
-
 	Solution solu;
 	int maxarea = solu.maxArea(height);
 	cout << maxarea << endl;
