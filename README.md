@@ -103,3 +103,13 @@ if(MaxId>i){help[i]=Min(help[2*id-i],MaxId-i);}
     * 同理，sum > 0，说明num[q]太大了，需要q向前移动。
     * 当sum == 0时，说明找到了一个解。但找到了一个解，并不说明解中有num[i]的所有解都找到了，因此p或q还需要跳过那些nums[p]与前一个相同以及nums[q]与后一个相同的值的情况，这样可以去掉重复的情况，继续移动寻找其他的解，同时这里还需要直到p==q为止。
 * 4.之后i++，以下一个位置作为固定位置，继续进行查找操作，但是这里也有一个去重操作，当前固定位置如果和前一个固定位置的数值相同则直接跳过，因为这样求解出来的组合肯定是和前一个固定位置相同的。
+
+##NO.16 3Sum Closest
+这道题和上一道题类似，这里是求解与目标和最接近的三个数的组合的和。
+* 思路和上一题类似，也是固定一个位置，然后从这个位置的下一个位置开始作为start，数组末尾作为end，查找另外两个数，通过twosum那道题的思路。
+* 这里需要使用两个变量，一个记录已经查找过的三个数组合的和与目标和的最小差值，取值为正数，一个是记录最小差值对应的三个数组合的和。初始状态最小差值closest取一个最大值，对应和closestsum初始为0即可。
+* 然后计算sum = nums[i] + nums[p] + nums[q];
+      * 如果sum > target，计算与targe的差值sum-target，并将其与最小差值closest比较，如果比closest小则更新closest为sum-target，同时更新closestsum = sum。
+      * 如果sum < target，计算与target的差值，target-sum，并将其与最小差值closest比较，如果比closest小则更新closest和closestsum。
+      * 如果sum == target则直接返回target即可。
+* 最后返回closestsum即为最终结果。
