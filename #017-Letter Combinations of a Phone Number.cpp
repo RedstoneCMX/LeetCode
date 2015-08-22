@@ -9,6 +9,7 @@ using namespace std;
 3.两种方法的时间复杂度？
 */
 /*************************在leetcode上直接提交以下代码即可******************************/
+/*
 class Solution 
 {
 	public:
@@ -57,8 +58,53 @@ class Solution
 
      	return lc;
     }
-};
+};*/
 /*************************在leetcode上直接提交以上代码即可******************************/
+
+//DFS的方法
+class Solution 
+{
+private:
+     string  digit2letter[10];
+     vector<string> lc;
+public:
+     void createdigit2letter()
+     {
+          digit2letter[0] = "";
+          digit2letter[1] = "";
+          digit2letter[2] = "abc";
+          digit2letter[3] = "def";
+          digit2letter[4] = "ghi";
+          digit2letter[5] = "jkl";
+          digit2letter[6] = "mno";
+          digit2letter[7] = "pqrs";
+          digit2letter[8] = "tuv";
+          digit2letter[9] = "wxyz";
+     }
+     //深度优先搜索
+     void dfs(int dep, int maxdep, string &s, string ans)
+     {
+          if(dep == maxdep)
+          {
+               lc.push_back(ans);
+               return;
+          }
+          for(int i = 0; i < digit2letter[s[dep]-48].length(); i++)
+          {
+               dfs(dep + 1, maxdep, s, ans+digit2letter[s[dep]-48][i]);
+          }
+     }
+     vector<string> letterCombinations(string digits) 
+     {
+          if(digits.length() == 0)
+            return lc;
+          createdigit2letter();
+
+          dfs(0,digits.length(),digits,"");
+          return lc;
+     }
+};
+
 int main()
 {
 	string digits;
