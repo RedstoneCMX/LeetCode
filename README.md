@@ -244,3 +244,6 @@ nums[i] = nums[i-1]+nums[i-2];
 
 ##NO.101 Symmetric Tree
 这道题是关于二叉树的题，判断一棵二叉树是否是对称二叉树，非常基础的题，递归思路。
+
+##NO.102 Binary Tree Level Order Traversal
+这道题是关于二叉树的题，递归思路，其实就是深度优先搜索DFS。
