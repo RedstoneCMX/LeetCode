@@ -38,10 +38,10 @@ class Solution
        cin >> val;
        //假设-1为空节点
        if(val == -1)
-        *T = NULL;
+        T = NULL;
        else
        {
-           *T = new TreeNode(val);
+           T = new TreeNode(val);
            CreateBiTree(T->left);
            CreateBiTree(T->right);
        }
