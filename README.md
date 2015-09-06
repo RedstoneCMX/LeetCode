@@ -247,3 +247,6 @@ nums[i] = nums[i-1]+nums[i-2];
 
 ##NO.102 Binary Tree Level Order Traversal
 这道题是关于二叉树的题，递归思路，其实就是深度优先搜索DFS。
+
+##NO.189 Rotate Array
+这道题比较简单，提倡多种方法求解。目前使用的就是利用vector相关操作，按照规则做一遍实现的。
