@@ -260,6 +260,9 @@ nums[i] = nums[i-1]+nums[i-2];
 ##NO.202 Happy Number
 这道题还是比较简单。按照题目意思进行计算判断是否为happy number，如果是happy number最终会得到1，如果计算出现了之前的数则说明进入了无限循环中，没有1。
 
+##NO.203 Remove Linked List Elements
+这道题是链表操作的题，就是删除指定值的节点，比较简单。为方便起见，在链表头部添加了一个额外的节点-1。
+
 ##NO.226 Invert Binary Tree
 这道题是关于二叉树的题，左右倒置二叉树，非常基础的题，递归思路，交换左右子树。
 
