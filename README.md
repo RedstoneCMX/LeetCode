@@ -251,6 +251,10 @@ nums[i] = nums[i-1]+nums[i-2];
 ##NO.102 Binary Tree Level Order Traversal
 这道题是关于二叉树的题，递归思路，其实就是深度优先搜索DFS。
 
+##NO.118 Pascal's Triangle
+这个题比较简单，就是求解帕斯卡三角形，最简单的动态规划思路。
+状态转移方程：pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j]
+
 ##NO.125 Valid Palindrome
 这个题主要就是判断回文串，但是是有干扰字符的回文串，如果先对字符串进行预处理，除去非字母数字的话会出现超时，因为字符串可能会很长，而实际上它并不是回文串。因此不能对其进行预处理，应该直接对其进行操作，从头部尾部往中间查找匹配，非字母数字的跳过。
 
