@@ -251,6 +251,10 @@ nums[i] = nums[i-1]+nums[i-2];
 ##NO.102 Binary Tree Level Order Traversal
 这道题是关于二叉树的题，递归思路，其实就是深度优先搜索DFS。
 
+##NO.104 Maximum Depth of Binary Tree
+这道题是关于二叉树的题，递归思路，也就是DFS的思路，还比较简单。
+用一个变量maxdepth记录最大深度，每次二叉树遍历至某一个叶子节点便判断当前记录的depth和maxdepth的值的大小，更新maxdepth即可。
+
 ##NO.118 Pascal's Triangle
 这个题比较简单，就是求解帕斯卡三角形，最简单的动态规划思路。
 状态转移方程：pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j]
