@@ -281,6 +281,9 @@ nums[i] = nums[i-1]+nums[i-2];
 ##NO.169 Majority Element
 这道题比较简单，思路很简单，就是对数组进行一个升序排列即可，然后找到出现次数最多的数，时间复杂度为O(n)。
 
+##NO.171 Excel Sheet Column Number
+这道题比较简单，和168题正好相反，这里是title转number，比168题还更简单，类似于字符串转int。
+
 ##NO.189 Rotate Array
 这道题比较简单，提倡多种方法求解。目前使用的就是利用vector相关操作，按照规则做一遍实现的。
 
