@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-/*这个题就是求解二叉树的前序遍历。
+/*这个题就是求解二叉树的中序遍历。
 */
 struct TreeNode 
 {
