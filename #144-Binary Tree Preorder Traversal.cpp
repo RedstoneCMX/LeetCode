@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+/*这个题就是求解二叉树的前序遍历。
+*/
 struct TreeNode 
 {
 	int val;
@@ -8,6 +10,7 @@ struct TreeNode
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+/*************************在leetcode上直接提交以下代码即可******************************/
 class Solution 
 {
 private:
@@ -46,6 +49,7 @@ public:
        }
     }
 };
+/*************************在leetcode上直接提交以上代码即可******************************/
 int main()
 {
 	Solution solu;
