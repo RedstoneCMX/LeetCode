@@ -309,8 +309,11 @@ nums[i] = nums[i-1]+nums[i-2];
 将每一个数相同的二进制位的1的数量求出来，如果求出的1的数量是3的倍数，说明那个单数对应的这一位是0，
 如果不是3的倍数，那么那个单数对应的这一位就是1。
 
-##NO.94 Binary Tree Preorder Traversal
+##NO.144 Binary Tree Preorder Traversal
 这个题就是求解二叉树的前序遍历。
+
+##NO.145 Binary Tree Postorder Traversal
+这个题就是求解二叉树的后序遍历。
 
 ##NO.160 Intersection of Two Linked Lists
 这道题其实还算比较简单的，但是要求时间复杂度O(n)，空间复杂度O(1)还是有点意思的。
