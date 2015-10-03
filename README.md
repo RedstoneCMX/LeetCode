@@ -229,6 +229,13 @@ h(3)=h(0)*h(2)+h(1)*h(1)+h(2)*h(0)=1*2+1*1+2*1=5
 ```cpp
 nums[i] = nums[i-1]+nums[i-2];
 ```
+
+##NO.80 Remove Duplicates from Sorted Array II
+这道题方法还比较简单，使用一个指针pos记录当前更新的位置，然后使用一个变量count来记录当前连续相同的数的个数。
+初始时pos=1，count=1。然后从i=1~i=size-1进行遍历：
+* 如果nums[i]等于nums[i-1]则count++，并且判断count如果小于3则更新nums[pos]=nums[i]，并pos++。
+* 如果nums[i]不等于nums[i-1]，说明进入了下一个数的判断了，那么此时count更新为1.nums[pos]=nums[i]，并pos++。
+
 ##NO.82 Remove Duplicates from Sorted List II
 这道题和第83题其实是属于相似题，第83题是删除重复值，重复值留一个，而这道题所有重复值节点全部删除，不留任何有重复值的节点。为了方便起见，在链表头部添加一个无用节点-1，初始时before指针指向-1，behind指针指向head，循环判断behind指针是否为空，分两种情况讨论：
 * 1.behind的下一节点不空且behind节点的值与下一节点的值不等或者下一节点为空，则直接将before和behind两个指针往后移一个位置即可。
