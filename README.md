@@ -259,6 +259,9 @@ nums[i] = nums[i-1]+nums[i-2];
 比如011，转成格雷码之后就是010。其实就是011 XOR 001。
 可以看出上述提到的这种转化方法其实就是 i XOR i/2。
 
+##NO.92 Reverse Linked List II
+这个题还算简单，熟悉链表操作即可，是206题的升级版。
+
 ##NO.94 Binary Tree Inorder Traversal
 这个题就是求解二叉树的中序遍历。
 
