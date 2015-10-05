@@ -428,6 +428,14 @@ int iC = min(C, G), iD = min(D, H);
 这样(iA, iB)就是左下角的点，(iC, iD)就是右上角的点。
 * 判断是否有相交的面积就是判断(iC, iD)是否在(iA, iB)的右上角，也就是iC>iA 且iD>iB，然后减去相交的面积即可。
 
+##NO.225 Implement Stack using Queues
+这个题是使用队列实现栈的功能。队列是先进先出，而栈是后进先出。主要思路就是使用两个队列来实现，q和assist_q。
+* 1.对于push操作直接对队列q进行push操作即可。
+* 2.对于pop操作，首先判断q中是否有元素，如果为空则对assist\_q进行操作，将assist\_q中的元素push到q中，直到剩下最后一个，
+然后再pop出assist\_q最后一个元素。如果q不为空则将q中的元素push到assist\_q中，直到剩下最后一个，然后pop出q的最后一个元素。
+* 3.对于top操作，首先判断q是否为空，如果不为空则返回q的back元素，如果为空则返回assist_q的back元素。
+* 4.对于为空判断需要判断两个队列是否都为空。
+
 ##NO.226 Invert Binary Tree
 这道题是关于二叉树的题，左右倒置二叉树，非常基础的题，递归思路，交换左右子树。
 
