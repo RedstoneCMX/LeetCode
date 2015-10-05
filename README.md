@@ -265,6 +265,14 @@ nums[i] = nums[i-1]+nums[i-2];
 ##NO.94 Binary Tree Inorder Traversal
 这个题就是求解二叉树的中序遍历。
 
+##NO.96 Unique Binary Search Trees
+这个题属于动态规划的题，大概思路就是任何一个数都可以作为root节点，因此只需要循环将每个数都作为一次root节点，然后在root节点左边只能放比root节点数小的数，在root节点右边只能放比root节点数大的数，假设节点数为i，
+则状态转移方程为：
+```cpp
+nums[i] += nums[j-1] * nums[i-j] //j需要从1循环取到i，并且初始时nums[i] = 0。
+```
+需要注意的是nums[0]取1，没有实际意义，主要是为求解i = 1时方便。
+
 ##NO.98 Validate Binary Search Tree
 这个题比较简单，其实就是对二叉树进行中序遍历，如果是二叉搜索树，那么中序遍历得到的序列肯定是升序排列的。
 因此得到中序序列之后只需要判断该序列是否是升序排列即可。
