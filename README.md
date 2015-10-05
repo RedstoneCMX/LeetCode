@@ -304,6 +304,9 @@ nums[i] += nums[j-1] * nums[i-j] //j需要从1循环取到i，并且初始时num
 ##NO.112 Path Sum
 这道题是关于二叉树的题，递归思路，也就是DFS的思路。这里递归需要判断的是左右子树都为空的时候才是叶子节点，才能进行sum的最终判断。这道题和257题求解二叉树的路径类似。
 
+##NO.115 Min Stack
+这道题的思路是用另外一个单调stack来记录最小值就可以了，这个stack是单调的，栈顶元素最小。
+
 ##NO.118 Pascal's Triangle
 这个题比较简单，就是求解帕斯卡三角形，最简单的动态规划思路。
 状态转移方程：pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j]
