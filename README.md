@@ -331,6 +331,16 @@ nums[i] += nums[j-1] * nums[i-j] //j需要从1循环取到i，并且初始时num
 这个题要求不能开额外的空间，即空间复杂度是O(1)。
 该问题是经典面试问题，其标准解法是用两个指针，一快一慢，如果在快的指针能够追上慢的指针，则有环，否则无环。
 
+##NO.142 Linked List Cycle II
+这道题是141题的升级版，不仅仅是要判断链表有环，还要找到环入口的地方。
+* 首先判断是否有环和141题方法一样，只是fast和slow相等的时候break即可。
+* 之后就定义两个指针，一个cycle初始指向head，一个gocycle初始指向fast，
+嵌套两层循环，首先初始gocycle = fast，然后再嵌套一层循环，对gocycle进行操作:
+gocycle = gocycle->next，并判断cycle是否等于gocycle，如果相等则直接返回cycle，即为入口节点。
+如果等于fast，说明已经绕了一圈，还是没有和cycle相遇，说明cycle不是入口节点，break。返回到第一层循环，
+对cycle = cycle->next，然后再继续第二层循环，知道找到一个cycle能够是环中的一个节点，说明就是入口节点。
+* 这个方法貌似还是不太好，目前还没有想到更好的方法，还需深究。
+
 ##NO.144 Binary Tree Preorder Traversal
 这个题就是求解二叉树的前序遍历。
 
