@@ -307,6 +307,17 @@ nums[i] += nums[j-1] * nums[i-j] //j需要从1循环取到i，并且初始时num
 ##NO.115 Min Stack
 这道题的思路是用另外一个单调stack来记录最小值就可以了，这个stack是单调的，栈顶元素最小。
 
+##NO.116 Populating Next Right Pointers in Each Node
+这道题如果想到了是很简单的，总是想不到如此好的方法。还是水平不行啊。
+DFS的思路，主要是借助root->next来处理5->6的情况。
+```cpp
+     1 -> NULL
+   /  \
+  2 -> 3 -> NULL
+ / \  / \
+4->5->6->7 -> NULL
+```
+
 ##NO.118 Pascal's Triangle
 这个题比较简单，就是求解帕斯卡三角形，最简单的动态规划思路。
 状态转移方程：pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j]
