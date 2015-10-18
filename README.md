@@ -228,6 +228,16 @@ i和j表示的是i*j的网格从左上角到右下角的路径数量。
 并且初始的时候path[i][j]都为1。
 为方便起见，这里我从path[1][1]开始，表示1*1的网格的路径数量，不从0开始。
 
+##NO.64 Minimum Path Sum
+这道题是一道动态规划的题，还算简单。状态转移方程为：
+```cpp
+minpath[0][0] = grid[0][0];
+minpath[i][j] = minpath[i][j-1] + grid[i][j]; (i = 0 && j >= 1)
+minpath[i][j] = minpath[i-1][j] + grid[i][j]; (j = 0 && i >= 1)
+minpath[i][j] = min(minpath[i-1][j], minpath[i][j-1]) + grid[i][j]; (i >= 1 && j >= 1)
+```
+minpath[i][j]表示的是网格(i+1)*(j+1)的路径和的最小值，这里的minpath数组是从[0][0]开始的。
+
 ##NO.66 Plus One
 这道题比较简单，主要就注意加1之后的进位问题。
 
