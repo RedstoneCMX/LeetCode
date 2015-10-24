@@ -385,6 +385,9 @@ gocycle = gocycle->next，并判断cycle是否等于gocycle，如果相等则直
 ##NO.145 Binary Tree Postorder Traversal
 这个题就是求解二叉树的后序遍历。
 
+##NO.147 Insertion Sort List
+这又是一道关于链表的题，链表的插入排序，也比较简单，新建一个链表，然后遍历原链表，将遍历到的节点的数一个个插入新的链表中。
+
 ##NO.160 Intersection of Two Linked Lists
 这道题其实还算比较简单的，但是要求时间复杂度O(n)，空间复杂度O(1)还是有点意思的。
 其实也比较容易想到解决方法：
